@@ -3,10 +3,6 @@ module.exports = {
   parser: '@babel/eslint-parser',
   parserOptions: {
     requireConfigFile: false,
-    ecmaFeatures: {
-      jsx: true,
-      sourceType: 'module',
-    },
     babelOptions: {
       presets: ['@babel/preset-react'],
     },
@@ -104,5 +100,5 @@ module.exports = {
       },
     ],
   },
-  plugins: ['react', 'react-hooks', 'prettier'],
+  plugins: ['html', 'react', 'react-hooks', 'prettier'],
 };

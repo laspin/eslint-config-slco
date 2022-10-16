@@ -1,9 +1,10 @@
 {
   "name": "eslint-config-slco",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "ESLint and Prettier config",
   "main": "index.js",
   "bin": "index.js",
+  "author": "slco",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/laspin/eslint-config-slco.git"
