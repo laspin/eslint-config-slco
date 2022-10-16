@@ -1,8 +1,9 @@
 {
-  "name": "@slco/eslint-config-slco",
-  "version": "1.0.0",
+  "name": "eslint-config-slco",
+  "version": "1.0.3",
   "description": "ESLint and Prettier config",
   "main": "index.js",
+  "bin": "index.js",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/laspin/eslint-config-slco.git"
@@ -10,8 +11,6 @@
   "license": "MIT",
   "peerDependencies": {
     "@types/node": "^16.7.13",
-    "@typescript-eslint/eslint-plugin": "^4.31.0",
-    "@typescript-eslint/parser": "^4.31.0",
     "eslint": "^7.32.0",
     "eslint-config-airbnb": "^18.2.1",
     "eslint-config-airbnb-typescript": "^14.0.0",
@@ -29,8 +28,6 @@
   },
   "devDependencies": {
     "@types/node": "^16.7.13",
-    "@typescript-eslint/eslint-plugin": "^4.31.0",
-    "@typescript-eslint/parser": "^4.31.0",
     "eslint": "^7.32.0",
     "eslint-config-airbnb": "^18.2.1",
     "eslint-config-airbnb-typescript": "^14.0.0",
