@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-slco",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "ESLint and Prettier config",
   "main": "index.js",
   "bin": "index.js",
@@ -47,7 +47,7 @@
     "lint:fix": "eslint --fix"
   },
   "dependencies": {
-    "eslint": "8.22.0",
+    "eslint": "7.2.0",
     "eslint-config-slco": "^1.0.4"
   }
 }
