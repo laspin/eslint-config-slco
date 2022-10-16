@@ -38,11 +38,11 @@ Inside package.json file:
 
 ### Using Create React App:
 
-In package.json change block that **Extends React-App** to:
+In package.json change **Extends React-App** to:
 
 ```json
  {
-   "extends": "slco" 
+   "extends": ["react-app","slco"] // last
  }
 ```
 
@@ -57,7 +57,7 @@ Do so inside of **rules** for eslint and under **prettier/prettier** for prettie
   //example  
  {
   "extends": [
-    "slco"
+    "slco" // (last)
   ],
   "rules": {
     "no-console": 1,

@@ -80,6 +80,14 @@ module.exports = {
         extensions: ['.js', '.jsx', '.ts', '.tsx', '.mdx'],
       },
     ],
+    'radix': 0,
+    'no-shadow': [
+      1,
+      {
+        hoist: 'all',
+        allow: ['resolve', 'reject', 'done', 'next', 'err', 'error'],
+      },
+    ],
     '@typescript-eslint/comma-dangle': 0,
     'jsx-a11y/accessible-emoji': 0,
     'jsx-a11y/href-no-hash': 0,
@@ -100,5 +108,5 @@ module.exports = {
       },
     ],
   },
-  plugins: ['html', 'react', 'react-hooks', 'prettier'],
+  plugins: ['html', 'react-hooks', 'prettier'],
 };
