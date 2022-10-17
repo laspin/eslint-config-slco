@@ -1,15 +1,17 @@
 ## ESLint-Config-SLCO &nbsp; :page_with_curl:
 
-NPMJS URL: <a href="https://www.npmjs.com/package/eslint-config-slco" title="SLCO" target="_blank">ESLint-SLCO</a> 
+:coffee: NPMJS <kbd>URL:</kbd>  <a href="https://www.npmjs.com/package/eslint-config-slco" title="SLCO" target="_blank">ESLint-SLCO</a> 
 
-ESLint Prettier config
+<br />
+
+___Eslint-config-slco___ is an npm package with my eslint and prettier settings.  Easy to use and easily extended. :beer:
 
 <br />
 
 ### Install Package
 
-```js
-  npm i eslint-config-slco
+```text
+  npm i eslint-config-slco@latest
 ```
 <br />
 

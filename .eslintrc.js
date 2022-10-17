@@ -14,9 +14,11 @@ module.exports = {
   },
   rules: {
     'no-debugger': 0,
+    'no-use-before-define': 'off',
+    'import/no-cycle': 'off',
     'no-alert': 0,
     'no-await-in-loop': 0,
-    'no-return-assign': ['warn', 'except-parens'],
+    'no-return-assign': ['error', 'except-parens'],
     'no-restricted-syntax': [
       1,
       'ForInStatement',
@@ -31,12 +33,12 @@ module.exports = {
       },
     ],
     'prefer-const': [
-      'warn',
+      'error',
       {
         destructuring: 'all',
       },
     ],
-    'arrow-body-style': ['warn', 'as-needed'],
+    'arrow-body-style': [2, 'as-needed'],
     'no-unused-expressions': [
       1,
       {
@@ -44,7 +46,7 @@ module.exports = {
       },
     ],
     'no-param-reassign': [
-      'warn',
+      1,
       {
         props: false,
       },
@@ -57,47 +59,44 @@ module.exports = {
     'max-len': 0,
     'import/extensions': 0,
     'no-underscore-dangle': 0,
-    'import/no-unresolved': 0,
-    'no-unsafe-optional-chaining': 0,
-    'react/jsx-no-useless-fragment': 0,
-    'import/no-named-as-default': 0,
-    'import/no-dynamic-require': 0,
-    'import-resolver-webpack': 0,
     'consistent-return': 0,
     'react/display-name': 1,
     'react/no-array-index-key': 0,
-    'react-hooks/rules-of-hooks': 1,
-    'react/no-unescaped-entities': 0,
-    'react-hooks/exhaustive-deps': 1,
-    'react/jsx-props-no-spreading': 0,
     'react/react-in-jsx-scope': 0,
     'react/prefer-stateless-function': 0,
     'react/forbid-prop-types': 0,
+    'react/no-unescaped-entities': 0,
+    'react/function-component-definition': 0,
+    'jsx-a11y/accessible-emoji': 0,
+    'jsx-a11y/label-has-associated-control': [
+      'error',
+      {
+        assert: 'either',
+      },
+    ],
     'react/require-default-props': 0,
     'react/jsx-filename-extension': [
-      'warn',
+      1,
       {
         extensions: ['.js', '.jsx', '.ts', '.tsx', '.mdx'],
       },
     ],
     radix: 0,
     'no-shadow': [
-      1,
+      2,
       {
         hoist: 'all',
         allow: ['resolve', 'reject', 'done', 'next', 'err', 'error'],
       },
     ],
-    '@typescript-eslint/comma-dangle': 0,
-    'jsx-a11y/accessible-emoji': 0,
-    'jsx-a11y/href-no-hash': 0,
-    'jsx-a11y/anchor-is-valid': [
-      'warn',
+    quotes: [
+      2,
+      'single',
       {
-        aspects: ['invalidHref'],
+        avoidEscape: true,
+        allowTemplateLiterals: true,
       },
     ],
-
     'prettier/prettier': [
       'warn',
       {
@@ -105,8 +104,20 @@ module.exports = {
         singleQuote: true,
         printWidth: 70,
         endOfLine: 'auto',
+        semi: false,
       },
     ],
+    'jsx-a11y/href-no-hash': 'off',
+    'jsx-a11y/anchor-is-valid': [
+      'warn',
+      {
+        aspects: ['invalidHref'],
+      },
+    ],
+    'react-hooks/rules-of-hooks': 'error',
+    'react-hooks/exhaustive-deps': 'warn',
+    '@typescript-eslint/comma-dangle': ['off'],
+    'react/jsx-props-no-spreading': 'off',
   },
-  plugins: ['html', 'react-hooks', 'prettier'],
+  plugins: ['html', 'react-hooks','prettier'],
 };

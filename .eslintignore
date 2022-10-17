@@ -1,0 +1,9 @@
+node_modules
+/**/*.test.js
+.env.*
+.*
+package-lock.json
+*.md
+*.svg
+*.DS_Store
+lib
