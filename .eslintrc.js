@@ -80,7 +80,7 @@ module.exports = {
         extensions: ['.js', '.jsx', '.ts', '.tsx', '.mdx'],
       },
     ],
-    'radix': 0,
+    radix: 0,
     'no-shadow': [
       1,
       {

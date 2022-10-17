@@ -1,5 +1,7 @@
 ## ESLint-Config-SLCO &nbsp; :page_with_curl:
 
+NPMJS URL: <a href="https://www.npmjs.com/package/eslint-config-slco" title="SLCO" target="_blank">ESLint-SLCO</a> 
+
 ESLint Prettier config
 
 <br />
@@ -7,7 +9,7 @@ ESLint Prettier config
 ### Install Package
 
 ```js
- `npx install--peerdeps --dev eslint-config-slco`
+  npm i eslint-config-slco
 ```
 <br />
 
