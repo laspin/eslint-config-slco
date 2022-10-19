@@ -8,26 +8,35 @@ ___Eslint-config-slco___ is an npm package with my eslint and prettier settings.
 
 <br />
 
-### Install Package
+### I. Install Package
 
 ```text
   npm i eslint-config-slco@latest
 ```
 <br />
 
-### Create a .eslintrc file and add this:
+### II. Extending eslint config in one of two ways:
+ 
+- creating a new .eslintrc file in root of the project
+- creating a new or adding to an exisitng eslintConfig object in package.json
 
 ```json
  {
-    "extends": ["slco"]
+    "extends": ["slco"] // with .eslintrc file
  }
- //or inside package.json
+
+ // or package.json eslintConfig object
+ {
+  "eslintConfig": {
+    "extends": ["slco"] //last
+    }
+ }
 ```
 <br />
 
-### Add linting scripts
+### III. Add linting scripts
 
-Inside package.json file:
+- In package.json file:
 
 ```json
  {
@@ -39,24 +48,12 @@ Inside package.json file:
  }
 ```
 
-<br />
-
-### Using Create React App:
-
-In package.json change **Extends React-App** to:
-
-```json
- {
-   "extends": ["react-app","slco"] // last
- }
-```
-
 
 <br />
 
-### To overwrite __eslint__ or __prettier__ settings:
+### IV. To overwrite __eslint__ or __prettier__ settings:
 
-Do so inside of **rules** for eslint and under **prettier/prettier** for prettier
+- Do so inside of **rules** for eslint and under **prettier/prettier** for prettier
 
 ```json
   //example  
@@ -64,14 +61,15 @@ Do so inside of **rules** for eslint and under **prettier/prettier** for prettie
   "extends": [
     "slco" // (last)
   ],
-  "rules": {
-    "no-console": 1,
-    "prettier/prettier": [
+  "rules": { // ESLINT rules
+    "no-console": 2, // overwrites eslint 1-warning with 2-error
+    
+    "prettier/prettier": [ // PRETTIER rules
       "warn",
       {
         "trailingComma": "es5",
         "singleQuote": true,
-        "printWidth": 70,
+        "printWidth": 200, // overwrites 70 with 200
       }
     ]
   }
@@ -83,12 +81,11 @@ Do so inside of **rules** for eslint and under **prettier/prettier** for prettie
 ### Using WebStorm
 
 ```text
-- In Webstorm disable Prettier
+- In Webstorm disable Prettier plugin
 - Set ESLint to automatic inside Webstorm
 ```
 
-
-
+:100:
 
 
 
