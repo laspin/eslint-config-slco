@@ -32,6 +32,7 @@ Inside package.json file:
 ```json
  {
   "scripts": {
+    "slco": "npx install-peerdeps --dev eslint-config-slco", // run once
     "lint": "eslint .",
     "lint:fix": "eslint . --fix"
   }
