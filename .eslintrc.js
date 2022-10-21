@@ -2,14 +2,21 @@ module.exports = {
   extends: ['airbnb', 'prettier'],
   parser: '@babel/eslint-parser',
   parserOptions: {
+    ecmaFeatures: {
+      jsx: true,
+    },
+    allowImportExportEverywhere: true,
+    sourceType: 'module',
     requireConfigFile: false,
     babelOptions: {
       presets: ['@babel/preset-react'],
     },
   },
+  root: true,
   env: {
     browser: true,
     node: true,
+    es6: true,
     jest: true,
   },
   rules: {
@@ -103,8 +110,12 @@ module.exports = {
         trailingComma: 'es5',
         singleQuote: true,
         printWidth: 70,
-        endOfLine: 'auto',
+        endOfLine: 'lf',
+        jsxSingleQuote: false,
+        arrowParens: 'avoid',
+        htmlWhitespaceSensitivity: 'strict',
         semi: false,
+        bracketSpacing: true,
       },
     ],
     'jsx-a11y/href-no-hash': 'off',

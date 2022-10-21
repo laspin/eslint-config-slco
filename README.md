@@ -1,7 +1,7 @@
 ## ESLint-Config-SLCO &nbsp; :page_with_curl:
 
 :coffee: NPMJS <kbd>URL:</kbd>  <a href="https://www.npmjs.
-com/package/eslint-config-slco/v/1.2.3" title="SLCO" target="_blank">ESLint-SLCO</a>
+com/package/eslint-config-slco/v/1.2.4" title="SLCO" target="_blank">ESLint-SLCO</a>
 
 <br />
 
