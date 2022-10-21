@@ -1,20 +1,14 @@
 {
   "name": "eslint-config-slco",
-  "version": "1.2.4",
+  "version": "1.2.6",
   "description": "ESLint and Prettier config package. Easy to use and easily extended",
   "keywords": [
   "javascript",
-    "ecmascript",
-    "eslint",
-    "prettier",
-    "lint",
-    "react",
-    "hooks",
-    "babel",
-    "fix",
-    "easy",
-    "config",
-    "package"
+    "ecmascript","website","configuring","contributing",
+    "eslint", "react", "prettier","tool","reporting","code",
+    "lint", "linter","plugin","npm","install","configuration","es6",
+    "hooks", "babel", "fix", "easy", "config", "package",
+    "typescript", "airbnb", "slco","sl","github"
   ],
   "main": "index.js",
   "author": "Sl©",
