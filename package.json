@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-slco",
-  "version": "1.2.2",
+  "version": "1.2.3",
   "description": "ESLint and Prettier config package. Easy to use and easily extended",
   "keywords": [
   "javascript",
@@ -11,10 +11,13 @@
     "react",
     "hooks",
     "babel",
-    "fix"
+    "fix",
+    "easy",
+    "config",
+    "package"
   ],
   "main": "index.js",
-  "author": "slco",
+  "author": "Sl©",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/laspin/eslint-config-slco.git"

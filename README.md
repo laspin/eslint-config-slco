@@ -1,6 +1,7 @@
 ## ESLint-Config-SLCO &nbsp; :page_with_curl:
 
-:coffee: NPMJS <kbd>URL:</kbd>  <a href="https://www.npmjs.com/package/eslint-config-slco" title="SLCO" target="_blank">ESLint-SLCO</a> 
+:coffee: NPMJS <kbd>URL:</kbd>  <a href="https://www.npmjs.
+com/package/eslint-config-slco/v/1.2.3" title="SLCO" target="_blank">ESLint-SLCO</a>
 
 <br />
 
@@ -41,7 +42,6 @@ ___Eslint-config-slco___ is an npm package with my eslint and prettier settings.
 ```json
  {
   "scripts": {
-    "slco": "npx install-peerdeps --dev eslint-config-slco", // run once
     "lint": "eslint .",
     "lint:fix": "eslint . --fix"
   }
@@ -78,21 +78,32 @@ ___Eslint-config-slco___ is an npm package with my eslint and prettier settings.
 
 <br />
 
-### Using WebStorm
+### To have IDE do your dirty linting:
+
+<br />
+
+#### Using WebStorm :book:
 
 ```text
 - In Webstorm disable Prettier plugin
 - Set ESLint to automatic inside Webstorm
 ```
 
-:100:
+<br />
 
+#### Using VSCode :book:
 
+- In VSCode settings or
+- Inside a new `.vscode/settings.json` file
 
+```json
+ {
+    "editor.codeActionsOnSave": {
+        "source.fixAll.eslint": true
+    }
+ }
+```
 
+<br />
 
-
-
-
-
-
+<kbd>OK</kbd>&nbsp; :100: &nbsp; <kbd>SL</kbd> 

@@ -7,10 +7,8 @@ module.exports = {
     // rules from `@typescript-eslint/eslint-plugin`
     'plugin:@typescript-eslint/recommended',
     'plugin:@typescript-eslint/recommended-requiring-type-checking',
-    // all the JS Rules
     './.eslintrc.js',
   ],
-  // then some extra for Typescript
   parser: '@typescript-eslint/parser',
   plugins: ['@typescript-eslint'],
   // typescript rules
@@ -36,11 +34,11 @@ module.exports = {
     ],
     '@typescript-eslint/no-floating-promises': 'off',
     '@typescript-eslint/no-use-before-define': 'off',
-    // this is already covered by the typescript compiler
+    // already covered by the typescript compiler
     'no-undef': 'off',
-    'no-shadow': 'off', // TS does it
+    'no-shadow': 'off',
   },
   parserOptions: {
-    project: './tsconfig.json',
+    project: './tsconfig.json', // leave as is now
   },
 }
