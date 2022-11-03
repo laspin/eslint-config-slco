@@ -12,11 +12,21 @@ module.exports = {
       presets: ['@babel/preset-react'],
     },
   },
+  settings: {
+    'import/resolver': {
+      node: {
+        paths: ['.'],
+      },
+    },
+    react: {
+      version: 'detect',
+    },
+  },
   root: true,
   env: {
     browser: true,
     node: true,
-    es6: true,
+    es2021: true,
     jest: true,
   },
   rules: {
@@ -138,5 +148,5 @@ module.exports = {
     '@typescript-eslint/comma-dangle': ['off'],
     'react/jsx-props-no-spreading': 'off',
   },
-  plugins: ['html', 'react-hooks', 'prettier'],
+  plugins: ['html', 'import', 'react-hooks', 'prettier'],
 }
