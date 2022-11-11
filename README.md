@@ -8,6 +8,8 @@ target="_blank">ESLint-config-slco</a>
 
 ___Eslint-config-slco___ is an npm package with my eslint and prettier settings.  Easy to use and easily extended. :beer:
 
+###### No more `error` messages just `warnings`.
+
 <br />
 
 ### I. Install Package
@@ -30,23 +32,30 @@ ___Eslint-config-slco___ is an npm package with my eslint and prettier settings.
  // or package.json eslintConfig object
  {
   "eslintConfig": {
-    "extends": ["slco"] //last
+    "extends": ["eslint-config-slco"] //add last
     }
  }
 ```
 <br />
 
-### III. Add linting scripts
+### III. Add linting & peerdeps scripts
 
 - In package.json file:
 
 ```json
  {
   "scripts": {
+    "slco": "npx install-peerdeps -dev eslint-config slco",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix"
   }
  }
+```
+
+&nbsp; ..and followed by:
+
+```
+ npm run slco //adds all deps in package.json
 ```
 
 
