@@ -45,19 +45,29 @@ ___Eslint-config-slco___ is an npm package with my eslint and prettier settings.
 ```json
  {
   "scripts": {
-    "slco": "npx install-peerdeps -dev eslint-config slco",
+    "slco": "npx install-peerdeps --dev eslint-config-slco",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix"
   }
  }
 ```
 
-&nbsp; ..and followed by:
+• Before running `slco`, check if the script is available via npm:
 
-```
- npm run slco //adds all deps in package.json
+```json
+ npm run-script  //it shows list of avail scripts. If so type:
+ npm run slco
 ```
 
+&nbsp;..otherwise type:
+
+```text
+ npx install-peerdeps --dev eslint-config-slco
+```
+
+When correctly installed, it shows a SUCCESS message.
+
+<img src="images/npmyay.png" alt='peerdeps installed message'>
 
 <br />
 
