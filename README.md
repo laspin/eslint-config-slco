@@ -55,7 +55,7 @@ ___Eslint-config-slco___ is an npm package with my eslint and prettier settings.
 &nbsp; ..and followed by:
 
 ```
- npm run slco -D  //adds all deps in package.json
+ npm run slco //adds all deps in package.json
 ```
 
 
