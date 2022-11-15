@@ -54,8 +54,8 @@ ___Eslint-config-slco___ is an npm package with my eslint and prettier settings.
 
 • Before running `slco`, check if the script is available via npm:
 
-```json
- npm run-script  //it shows list of avail scripts. If so type:
+```text
+ npm run-script  // it shows list of avail scripts. If so type:
  npm run slco
 ```
 
@@ -76,7 +76,7 @@ When correctly installed, it shows a SUCCESS message.
 - Do so inside of **rules** for eslint and under **prettier/prettier** for prettier
 
 ```json
-  //example  
+  // example  
  {
   "extends": [
     "slco" // (last)
@@ -127,3 +127,77 @@ When correctly installed, it shows a SUCCESS message.
 <br />
 
 <kbd>OK</kbd>&nbsp; :100: &nbsp; <kbd>SL</kbd> 
+
+
+<br />
+
+#### REFERENCE FILES:
+
+```text
+  // REFERENCE PURPOSES: REACT & JEST
+
+  // package.json
+  "dependencies": {
+    ...
+    react-test-renderer
+    ^18.2.0
+    @testing-library/jest-dom
+    ": "
+    ^5.16.5
+    @testing-library/react
+    ": "
+    ^13.4.0
+    @testing-library/user-event
+    ": "
+    ^13.5.0
+    jest
+    ": "
+    ^29.3.1
+    jest-environment-jsdom
+    ": "
+    ^29.3.1
+  }
+
+  scripts: {
+    ...
+    "test": "jest --watchAll"
+  }
+
+  // babel.config.js
+  module.exports
+  = {
+  presets: [
+    '@babel/preset-env',
+    [
+      '@babel/preset-react',
+      {
+        runtime: 'automatic'
+      }
+    ]
+  ]
+}
+
+// jest.config.js
+module.exports = {
+  moduleFileExtensions: [
+    'js',
+    'jsx'
+  ],
+  modulePathIgnorePatterns: [
+    '<rootDir>/node_modules/'
+  ],
+  moduleNameMapper: {
+    '\\.(css|less)$': '<rootDir>/src/app.css',
+    // Support import ~
+    '^~(.*)': '<rootDir>/node_modules/$1'
+  },
+  setupFilesAfterEnv: [
+    '<rootDir>/src/setupTests.js'
+  ],
+  testEnvironment: 'jsdom'
+}
+
+/*
+ * @jest-environment jsdom //  or per file
+*/
+```
