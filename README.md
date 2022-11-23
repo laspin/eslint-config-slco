@@ -131,10 +131,10 @@ When correctly installed, it shows a SUCCESS message.
 
 <br />
 
-#### REFERENCE FILES:
+#### REFERENCE FILES I:
 
 ```text
-  // REFERENCE PURPOSES: REACT & JEST
+  // REFERENCE PURPOSES I: REACT & JEST
 
   // package.json
   "dependencies": {
@@ -197,6 +197,121 @@ module.exports = {
   testEnvironment: 'jsdom'
 }
 
+/*
+ * @jest-environment jsdom //  or per file
+*/
+```
+
+<br />
+
+
+REFERENCE FILES II
+
+
+```text
+  // REFERENCE PURPOSES II
+  // Adding Cypress to above React/Jest config
+
+  // package.json
+  "dependencies": {
+    ...
+    react-test-renderer ^18.2.0         
+    @testing-library/jest-dom ^5.16.5      
+    @testing-library/react ^13.4.0
+    @testing-library/user-event  ^13.5.0
+    jest ^29.3.1
+    jest-environment-jsdom ^29.3.1,
+    ...,
+    "@testing-library/jest-dom": "^5.16.5"       
+    "@testing-library/react": "^13.4.0"       
+    "@testing-library/user-event": "^13.5.0"      
+  }
+
+  scripts: {
+    ...
+    "test": "jest --watchAll",
+    "cypress:open": "./node_modules/.bin/cypress open",
+    "cypress:run": "./node_modules/.bin/cypress run",
+    "cybookshop": "npm run cypress:open --record --spec 'cypress/e2e/bookshop.spec.cy.js",
+    "slco": "npx install-peerdeps --dev eslint-config-slco",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
+    },
+    "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest",
+      "plugin:cypress/recommended",
+      "eslint-config-slco"
+    ],
+    "rules": {
+      "jest/valid-expect": 0,
+      "react/prop-types": 0,
+      "cypress/no-unnecessary-waiting": 0,
+      "testing-library/await-async-utils": 0
+    }
+  },
+  
+  ...
+  ...
+
+// babel.config.js
+module.exports= {
+    presets: [
+        '@babel/preset-env',
+    [
+        '@babel/preset-react',
+    {
+        runtime: 'automatic'
+    }
+    ]
+  ]
+}
+
+    // cypress.config.js
+    const { defineConfig } = require('cypress')
+    require('dotenv').config()
+    
+    module.exports = defineConfig({
+      e2e: {
+        baseUrl: process.env.REACT_APP_BASE_URL,
+        env: {
+          development: process.env.REACT_APP_DEV,
+          booksApi: process.env.REACT_APP_BASE_API, // ..8080/books
+        },
+        pageLoadTimeout: process.env.REACT_APP_PAGE_LOAD_TIMEOUT,
+        watchForFileChanges: false,
+    
+        defaultCommandTimeout: 8000,
+        fileServerFolder: process.env.REACT_APP_SERVER_FOLDER, // stubServer
+        setupNodeEvents(on, config) {
+          // node evts
+          console.log('\n\n -| config --> ', config, ' ..l__l__\n')
+        },
+      },
+    })
+
+
+  // jest.config.js
+  module.exports = {
+     moduleFileExtensions: [
+        'js',
+        'jsx'
+     ],
+     modulePathIgnorePatterns: [
+        '<rootDir>/node_modules/'
+     ],
+     moduleNameMapper: {
+        '\\.(css|less)$': '<rootDir>/src/app.css',
+        // Support import ~
+        '^~(.*)': '<rootDir>/node_modules/$1'
+     },
+     setupFilesAfterEnv: [
+        '<rootDir>/src/setupTests.js'
+     ],
+     testEnvironment: 'jsdom'
+  }
+    
 /*
  * @jest-environment jsdom //  or per file
 */
