@@ -24,7 +24,7 @@ ___Eslint-config-slco___ is an npm package with my eslint and prettier settings.
 - creating a new .eslintrc file in root of the project
 - creating a new or adding to an exisitng eslintConfig object in package.json
 
-```json
+```text
  {
     "extends": ["slco"] // with .eslintrc file
  }
@@ -75,7 +75,7 @@ When correctly installed, it shows a SUCCESS message.
 
 - Do so inside of **rules** for eslint and under **prettier/prettier** for prettier
 
-```json
+```text
   // example  
  {
   "extends": [

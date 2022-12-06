@@ -14,7 +14,7 @@ module.exports = {
   // typescript rules
   rules: {
     '@typescript-eslint/no-misused-promises': [
-      'error',
+      'warn',
       {
         checksVoidReturn: false,
       },
@@ -39,6 +39,6 @@ module.exports = {
     'no-shadow': 'off',
   },
   parserOptions: {
-    project: './tsconfig.json', // leave as is now
+    project: './tsconfig.json',
   },
 }
