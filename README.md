@@ -38,36 +38,18 @@ ___Eslint-config-slco___ is an npm package with my eslint and prettier settings.
 ```
 <br />
 
-### III. Add linting & peerdeps scripts
+### III. Add linting
 
 - In package.json file:
 
 ```json
  {
   "scripts": {
-    "slco": "npx install-peerdeps --dev eslint-config-slco",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix"
   }
  }
 ```
-
-• Before running `slco`, check if the script is available via npm:
-
-```text
- npm run-script  // it shows list of avail scripts. If so type:
- npm run slco
-```
-
-&nbsp;..otherwise type:
-
-```text
- npx install-peerdeps --dev eslint-config-slco
-```
-
-When correctly installed, it shows a SUCCESS message.
-
-<img src="images/npmyay.png" alt='peerdeps installed message'>
 
 <br />
 
@@ -139,23 +121,12 @@ When correctly installed, it shows a SUCCESS message.
   // package.json
   "dependencies": {
     ...
-    react-test-renderer
-    ^18.2.0
-    @testing-library/jest-dom
-    ": "
-    ^5.16.5
-    @testing-library/react
-    ": "
-    ^13.4.0
-    @testing-library/user-event
-    ": "
-    ^13.5.0
-    jest
-    ": "
-    ^29.3.1
-    jest-environment-jsdom
-    ": "
-    ^29.3.1
+    react-test-renderer ^18.2.0         
+    @testing-library/jest-dom ^5.16.5       
+    @testing-library/react ^13.4.0      
+    @testing-library/user-event ^13.5.0      
+    jest ^29.3.1      
+    jest-environment-jsdom ^29.3.1     
   }
 
   scripts: {
