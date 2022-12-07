@@ -1,14 +1,13 @@
 ## ESLint-Config-SLCO &nbsp; :page_with_curl:
 
 :coffee: NPMJS <kbd>URL:</kbd>  <a href="https://www.npmjs.
-com/package/eslint-config-slco" title="ESLint-config-slco" 
+com/package/eslint-config-slco" title="ESLint-config-slco"
 target="_blank">ESLint-config-slco</a>
 
 <br />
 
-___Eslint-config-slco___ is an npm package with my eslint and prettier settings.  Easy to use and easily extended. :beer:
-
-###### No more `error` messages just `warnings`.
+___Eslint-config-slco___ is an npm package with my eslint and prettier settings.  
+Easy to use and easily extended. :beer:
 
 <br />
 
@@ -20,7 +19,7 @@ ___Eslint-config-slco___ is an npm package with my eslint and prettier settings.
 <br />
 
 ### II. Extending eslint config in one of two ways:
- 
+
 - creating a new .eslintrc file in root of the project
 - creating a new or adding to an exisitng eslintConfig object in package.json
 
@@ -38,18 +37,36 @@ ___Eslint-config-slco___ is an npm package with my eslint and prettier settings.
 ```
 <br />
 
-### III. Add linting
+### III. Add linting & peerdeps scripts
 
 - In package.json file:
 
 ```json
  {
   "scripts": {
+    "slco": "npx install-peerdeps --dev eslint-config-slco",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix"
   }
  }
 ```
+
+• Before running `slco`, check if the script is available via npm:
+
+```text
+ npm run-script  // it shows list of avail scripts. If so type:
+ npm run slco
+```
+
+&nbsp;..otherwise type:
+
+```text
+ npx install-peerdeps --dev eslint-config-slco
+```
+
+When correctly installed, it shows a SUCCESS message.
+
+<img src="images/npmyay.png" alt='peerdeps installed message'>
 
 <br />
 
@@ -80,11 +97,17 @@ ___Eslint-config-slco___ is an npm package with my eslint and prettier settings.
 
 <br />
 
-### To have IDE do your dirty linting:
+### To have IDE lint files:
 
 <br />
 
 #### Using WebStorm :book:
+
+It's using `ESlint v8.22.0.`        
+ESLint v8.24.0 or v8.29.0 did not work for me with WebStorm, so if it is not working and
+WebStorm settings are set to find file automatically, go to ESLint settings inside
+WebStorm and link to file manually.
+
 
 ```text
 - In Webstorm disable Prettier plugin
@@ -108,7 +131,7 @@ ___Eslint-config-slco___ is an npm package with my eslint and prettier settings.
 
 <br />
 
-<kbd>OK</kbd>&nbsp; :100: &nbsp; <kbd>SL</kbd> 
+<kbd>OK</kbd>&nbsp; :100: &nbsp; <kbd>SL</kbd>
 
 
 <br />

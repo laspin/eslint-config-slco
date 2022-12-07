@@ -1,18 +1,26 @@
 module.exports = {
   root: true,
+
   parser: '@babel/eslint-parser',
+
   extends: ['airbnb', 'prettier'],
-  plugins: ['react-hooks', 'prettier'],
+
+  plugins: ['import', 'react-hooks', 'prettier'],
 
   parserOptions: {
+    sourceType: 'module',
     requireConfigFile: false,
     babelOptions: {
       presets: ['@babel/preset-react'],
+    },
+    ecmaFeatures: {
+      jsx: true,
     },
   },
 
   env: {
     browser: true,
+    commonjs: true,
     es6: true,
     jest: true,
     node: true,
@@ -63,6 +71,7 @@ module.exports = {
         props: false,
       },
     ],
+    'no-console': 0,
     'no-case-declarations': 0,
     'import/prefer-default-export': 0,
     'func-names': 0,
@@ -95,7 +104,7 @@ module.exports = {
     'react/jsx-filename-extension': [
       1,
       {
-        extensions: ['.js', '.jsx', '.ts', '.tsx'],
+        extensions: ['.js', '.jsx', '.ts', '.tsx', '.mdx'],
       },
     ],
 
@@ -109,9 +118,12 @@ module.exports = {
     'react-hooks/rules-of-hooks': 1,
     'react-hooks/exhaustive-deps': 1,
     'react/jsx-props-no-spreading': 0,
+
     'testing-library/no-container': 0,
     'testing-library/no-node-access': 0,
+
     radix: 0,
+
     'no-shadow': [
       1,
       {
