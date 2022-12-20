@@ -4,13 +4,11 @@ module.exports = {
     JSX: true,
   },
   extends: [
-    // rules from `@typescript-eslint/eslint-plugin`
-    'plugin:@typescript-eslint/recommended',
-    'plugin:@typescript-eslint/recommended-requiring-type-checking',
+    'plugin:@typescript-eslint/eslint-plugin',
     './.eslintrc.js',
   ],
   parser: '@typescript-eslint/parser',
-  plugins: ['@typescript-eslint'],
+  plugins: ['@typescript-eslint/eslint-plugin'],
   // typescript rules
   rules: {
     '@typescript-eslint/no-misused-promises': [

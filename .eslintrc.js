@@ -1,43 +1,53 @@
 module.exports = {
   root: true,
-
   parser: '@babel/eslint-parser',
-
-  extends: ['airbnb', 'prettier'],
-
-  plugins: ['import', 'react-hooks', 'prettier'],
-
-  parserOptions: {
-    sourceType: 'module',
-    requireConfigFile: false,
-    babelOptions: {
-      presets: ['@babel/preset-react'],
-    },
-    ecmaFeatures: {
-      jsx: true,
-    },
-  },
-
+  extends: [
+    'airbnb',
+    'eslint:recommended',
+    'plugin:prettier/recommended',
+    'plugin:import/recommended',
+  ],
   env: {
     browser: true,
     commonjs: true,
     es6: true,
     jest: true,
-    node: true,
+  },
+
+  plugins: ['eslint-plugin-react', 'react-hooks'],
+
+  parserOptions: {
+    ecmaVersion: 2020,
+    sourceType: 'module',
+    ecmaFeatures: {
+      jsx: true,
+    },
+    requireConfigFile: false,
+    babelOptions: {
+      presets: ['@babel/preset-react'],
+    },
   },
 
   settings: {
+    'import/resolver': {
+      node: {
+        paths: ['src'],
+      },
+    },
     react: {
-      version: 'detect',
+      // removes react not installed warning from config file and keep plugin
+      // react install with application
+      version: '999.999.999',
     },
   },
 
   rules: {
     'no-debugger': 0,
-    'no-use-before-define': 'off',
-    'import/no-cycle': 'off',
+    'no-use-before-define': 0,
     'no-alert': 0,
     'no-await-in-loop': 0,
+    'react/jsx-no-useless-fragment': 1,
+    'react/no-unstable-nested-components': 1,
     'no-return-assign': ['error', 'except-parens'],
     'no-restricted-syntax': [
       1,
@@ -81,10 +91,11 @@ module.exports = {
     'import/extensions': 0,
     'no-underscore-dangle': 0,
     'consistent-return': 0,
-
+    'import/no-duplicates': 0,
     'jsx-a11y/accessible-emoji': 0,
     'react/jsx-uses-vars': 1,
     'react/jsx-uses-react': 1,
+    'react/react-in-jsx-scope': 0,
     'jsx-a11y/label-has-associated-control': [
       1,
       {
@@ -110,7 +121,6 @@ module.exports = {
 
     'react/display-name': 1,
     'react/no-array-index-key': 1,
-    'react/react-in-jsx-scope': 1,
     'react/prefer-stateless-function': 0,
     'react/forbid-prop-types': 0,
     'react/no-unescaped-entities': 0,
@@ -118,7 +128,6 @@ module.exports = {
     'react-hooks/rules-of-hooks': 1,
     'react-hooks/exhaustive-deps': 1,
     'react/jsx-props-no-spreading': 0,
-
     'testing-library/no-container': 0,
     'testing-library/no-node-access': 0,
 
