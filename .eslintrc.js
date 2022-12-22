@@ -2,7 +2,6 @@ module.exports = {
   root: true,
   parser: '@babel/eslint-parser',
   extends: [
-    'airbnb',
     'eslint:recommended',
     'plugin:prettier/recommended',
     'plugin:import/recommended',
@@ -96,30 +95,16 @@ module.exports = {
     'react/jsx-uses-vars': 1,
     'react/jsx-uses-react': 1,
     'react/react-in-jsx-scope': 0,
-    'jsx-a11y/label-has-associated-control': [
-      1,
-      {
-        assert: 'either',
-      },
-    ],
     'jsx-a11y/href-no-hash': 0,
-    'jsx-a11y/anchor-is-valid': [
-      'error',
-      {
-        components: ['Link'],
-        specialLink: ['hrefLeft', 'hrefRight'],
-        aspects: ['noHref', 'invalidHref', 'preferButton'],
-      },
-    ],
     'react/require-default-props': 0,
     'react/jsx-filename-extension': [
       1,
       {
-        extensions: ['.js', '.jsx', '.ts', '.tsx', '.mdx'],
+        extensions: ['.js', '.jsx', '.ts', '.tsx'],
       },
     ],
 
-    'react/display-name': 1,
+    'react/display-name': 0,
     'react/no-array-index-key': 1,
     'react/prefer-stateless-function': 0,
     'react/forbid-prop-types': 0,

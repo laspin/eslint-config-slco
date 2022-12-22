@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-slco",
-  "version": "1.6.0",
+  "version": "1.7.0",
   "description": "ESLint and Prettier config package. Easy to use and easily extended",
   "keywords": [
     "javascript",
@@ -71,6 +71,7 @@
     "eslint-plugin-jsx-a11y": "^6.5.1",
     "eslint-plugin-node": "^11.1.0",
     "eslint-plugin-prettier": "^4.0.0",
+    "eslint-plugin-react": "^7.31.11",
     "eslint-plugin-react-hooks": "^4.3.0",
     "prettier": "^2.7.1"
   },
@@ -82,7 +83,7 @@
     "@types/tape": "^4.13.2",
     "@typescript-eslint/eslint-plugin": "^5.14.0",
     "@typescript-eslint/parser": "^5.14.0",
-    "eslint": "^8.10.0",
+    "eslint": "8.21.0",
     "eslint-config-airbnb": "^19.0.4",
     "eslint-config-airbnb-base": "^15.0.0",
     "eslint-config-airbnb-typescript": "^16.1.1",
@@ -102,5 +103,8 @@
   },
   "dependencies": {
     "typescript": "^4.6.2"
-  }
+  },
+  "extends":
+    ["prettier"]
+
 }
