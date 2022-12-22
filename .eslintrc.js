@@ -3,39 +3,36 @@ module.exports = {
   parser: '@babel/eslint-parser',
   extends: [
     'eslint:recommended',
-    'plugin:prettier/recommended',
     'plugin:import/recommended',
+    'plugin:prettier/recommended',
   ],
   env: {
     browser: true,
     commonjs: true,
+    node: true,
     es6: true,
     jest: true,
   },
 
-  plugins: ['eslint-plugin-react', 'react-hooks'],
+  plugins: ['eslint-plugin-react', 'react-hooks', 'prettier'
+  ],
 
   parserOptions: {
-    ecmaVersion: 2020,
     sourceType: 'module',
     ecmaFeatures: {
       jsx: true,
     },
     requireConfigFile: false,
     babelOptions: {
-      presets: ['@babel/preset-react'],
+      presets: [
+        '@babel/preset-env',
+        '@babel/preset-react',
+      ],
     },
   },
 
   settings: {
-    'import/resolver': {
-      node: {
-        paths: ['src'],
-      },
-    },
     react: {
-      // removes react not installed warning from config file and keep plugin
-      // react install with application
       version: '999.999.999',
     },
   },
@@ -47,6 +44,8 @@ module.exports = {
     'no-await-in-loop': 0,
     'react/jsx-no-useless-fragment': 1,
     'react/no-unstable-nested-components': 1,
+    'eact/prop-types': 0,
+    'camelcase': 0,
     'no-return-assign': ['error', 'except-parens'],
     'no-restricted-syntax': [
       1,
