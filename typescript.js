@@ -3,10 +3,7 @@ module.exports = {
     React: true,
     JSX: true,
   },
-  extends: [
-    'plugin:@typescript-eslint/eslint-plugin',
-    './.eslintrc.js',
-  ],
+  extends: ['plugin:@typescript-eslint/eslint-plugin', './.eslintrc.js'],
   parser: '@typescript-eslint/parser',
   plugins: ['@typescript-eslint/eslint-plugin'],
   // typescript rules
@@ -19,10 +16,7 @@ module.exports = {
     ],
     '@typescript-eslint/no-explicit-any': 'off',
     'no-unused-vars': 0,
-    '@typescript-eslint/no-unused-vars': [
-      1,
-      { ignoreRestSiblings: true },
-    ],
+    '@typescript-eslint/no-unused-vars': [1, { ignoreRestSiblings: true }],
     'no-redeclare': 'off',
     '@typescript-eslint/no-redeclare': [
       'warn',

@@ -1,11 +1,7 @@
 module.exports = {
   root: true,
   parser: '@babel/eslint-parser',
-  extends: [
-    'eslint:recommended',
-    'plugin:import/recommended',
-    'plugin:prettier/recommended',
-  ],
+  extends: ['eslint:recommended', 'plugin:import/recommended', 'plugin:prettier/recommended'],
   env: {
     browser: true,
     commonjs: true,
@@ -14,8 +10,7 @@ module.exports = {
     jest: true,
   },
 
-  plugins: ['eslint-plugin-react', 'react-hooks', 'prettier'
-  ],
+  plugins: ['eslint-plugin-react', 'react-hooks', 'prettier'],
 
   parserOptions: {
     sourceType: 'module',
@@ -24,10 +19,7 @@ module.exports = {
     },
     requireConfigFile: false,
     babelOptions: {
-      presets: [
-        '@babel/preset-env',
-        '@babel/preset-react',
-      ],
+      presets: ['@babel/preset-env', '@babel/preset-react'],
     },
   },
 
@@ -45,14 +37,9 @@ module.exports = {
     'react/jsx-no-useless-fragment': 1,
     'react/no-unstable-nested-components': 1,
     'eact/prop-types': 0,
-    'camelcase': 0,
+    camelcase: 0,
     'no-return-assign': ['error', 'except-parens'],
-    'no-restricted-syntax': [
-      1,
-      'ForInStatement',
-      'LabeledStatement',
-      'WithStatement',
-    ],
+    'no-restricted-syntax': [1, 'ForInStatement', 'LabeledStatement', 'WithStatement'],
     'no-unused-vars': [
       1,
       {
@@ -138,13 +125,13 @@ module.exports = {
       {
         trailingComma: 'es5',
         singleQuote: true,
-        printWidth: 70,
+        printWidth: 99,
         tabWidth: 2,
         useTabs: false,
         endOfLine: 'lf',
         jsxSingleQuote: false,
         arrowParens: 'avoid',
-        htmlWhitespaceSensitivity: 'strict',
+        htmlWhitespaceSensitivity: 'ignore',
         semi: false,
         bracketSameLine: false,
         proseWrap: 'always',
