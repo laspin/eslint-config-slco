@@ -48,7 +48,7 @@ Easy to use and easily extended. :beer:
     "lint": "eslint .",
     "lint:fix": "eslint . --fix"
   }
- }
+}
 ```
 
 • Before running `slco`, check if the script is available via npm:
@@ -104,15 +104,28 @@ When correctly installed, it shows a SUCCESS message.
 #### Using WebStorm :book:
 
 It's using `ESlint v8.22.0.`        
-ESLint v8.24.0 or v8.29.0 did not work for me with WebStorm, so if it is not working and
-WebStorm settings are set to find file automatically, go to ESLint settings inside
-WebStorm and link to file manually.
+Newest versions have not work for me with WebStorm. ESlint also needs to be enable and
+either set to find this file automatically or manually be linked to it in Webstorm.
+
+#####  Webstorm settings
 
 
 ```text
-- In Webstorm disable Prettier plugin
-- Set ESLint to automatic inside Webstorm
+  // Inside Webstorm
+- Set ESLint to automatic/ manually link file
 ```
+
+<br />
+
+##### Some rules are enabled/disabled here.
+
+```text
+ // In Webstorm   
+ > Editor > Inspections
+```
+
+
+
 
 <br />
 

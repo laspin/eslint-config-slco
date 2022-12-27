@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-slco",
-  "version": "1.4.0",
+  "version": "2.6.3",
   "description": "ESLint and Prettier config package. Easy to use and easily extended",
   "keywords": [
     "javascript",

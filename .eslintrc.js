@@ -3,7 +3,7 @@ module.exports = {
 
   parser: '@babel/eslint-parser',
 
-  extends: ['airbnb', 'prettier'],
+  extends: ['eslint:recommended', 'prettier'],
 
   plugins: ['import', 'react-hooks', 'prettier'],
 
@@ -11,13 +11,13 @@ module.exports = {
     sourceType: 'module',
     requireConfigFile: false,
     babelOptions: {
-      presets: ['@babel/preset-react'],
+      presets: ['@babel/preset-env', '@babel/preset-react'],
     },
     ecmaFeatures: {
       jsx: true,
     },
   },
-
+  ignorePatterns: ['src/**/*.test.ts', '*.spec.cy.js'],
   env: {
     browser: true,
     commonjs: true,
