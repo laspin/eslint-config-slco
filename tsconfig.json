@@ -7,12 +7,10 @@
     "types": [
       "node"
     ],
-    // export code as
     "target": "ES5",
     "module": "commonjs",
-    /* Enable all strict type-checking options. */
-    "strict": true,
-    /* Enables emit interoperability between CommonJS and ES Modules  */
-    "esModuleInterop": true
+    /* Strict Type-Checking Options */
+    "strict": true /* Enable all strict type-checking options. */,
+    "esModuleInterop": true 
   }
 }

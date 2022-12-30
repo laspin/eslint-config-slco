@@ -4,14 +4,13 @@ module.exports = {
     JSX: true,
   },
   extends: [
-    // rules from `@typescript-eslint/eslint-plugin`
-    'plugin:@typescript-eslint/recommended',
+    'plugin:@typescript-eslint/recommended', // Uses rules from `@typescript-eslint/eslint-plugin`,
+    'airbnb-typescript',
     'plugin:@typescript-eslint/recommended-requiring-type-checking',
     './.eslintrc.js',
   ],
   parser: '@typescript-eslint/parser',
   plugins: ['@typescript-eslint'],
-  // typescript rules
   rules: {
     '@typescript-eslint/no-misused-promises': [
       'error',
@@ -21,10 +20,7 @@ module.exports = {
     ],
     '@typescript-eslint/no-explicit-any': 'off',
     'no-unused-vars': 0,
-    '@typescript-eslint/no-unused-vars': [
-      1,
-      { ignoreRestSiblings: true },
-    ],
+    '@typescript-eslint/no-unused-vars': [1, { ignoreRestSiblings: true }],
     'no-redeclare': 'off',
     '@typescript-eslint/no-redeclare': [
       'warn',
@@ -34,11 +30,10 @@ module.exports = {
     ],
     '@typescript-eslint/no-floating-promises': 'off',
     '@typescript-eslint/no-use-before-define': 'off',
-    // already covered by the typescript compiler
     'no-undef': 'off',
     'no-shadow': 'off',
   },
   parserOptions: {
-    project: './tsconfig.json', // leave as is now
+    project: './tsconfig.json',
   },
 }
