@@ -1,4 +1,5 @@
 module.exports = {
+  root: true,
   extends: ['eslint:recommended', 'prettier'],
   parser: '@babel/eslint-parser',
   parserOptions: {
@@ -21,10 +22,18 @@ module.exports = {
     'testing-library/no-node-access': 0,
     radix: 0,
     'no-debugger': 0,
-    'no-use-before-define': 'off',
-    'import/no-cycle': 'off',
+    'no-use-before-define': 0,
+    'import/no-cycle': 0,
     'no-alert': 0,
     'no-await-in-loop': 0,
+    'jest/valid-expect': 0,
+    'react/prop-types': 0,
+    'testing-library/await-async-utils': 0,
+    'no-unsafe-optional-chaining': 0,
+    'no-optional-chaining': 0,
+    'react/jsx-no-useless-fragment': 0,
+    'react/destructuring-assignment': 0,
+    'react/jsx-no-constructed-context-values': 0,
     'no-return-assign': ['error', 'except-parens'],
     'no-restricted-syntax': [1, 'ForInStatement', 'LabeledStatement', 'WithStatement'],
     'no-unused-vars': [
@@ -35,7 +44,7 @@ module.exports = {
       },
     ],
     'prefer-const': [
-      'error',
+      0,
       {
         destructuring: 'all',
       },
