@@ -6,7 +6,7 @@ target="_blank">ESLint-config-slco</a>
 
 <br />
 
-___Eslint-config-slco___ is an npm package with my eslint and prettier settings.  
+___Eslint-config-slco___ is an npm package with my eslint enabled and prettier settings.  
 Easy to use and easily extended. :beer:
 
 <br />
@@ -16,6 +16,7 @@ Easy to use and easily extended. :beer:
 ```text
   npm i eslint-config-slco@latest
 ```
+
 <br />
 
 ### II. Extending eslint config in one of two ways:
@@ -35,6 +36,7 @@ Easy to use and easily extended. :beer:
     }
  }
 ```
+
 <br />
 
 ### III. Add linting & peerdeps scripts
@@ -66,9 +68,10 @@ Easy to use and easily extended. :beer:
 
 When correctly installed, it shows a SUCCESS message.
 
-<img src="images/npmyay.png" alt='peerdeps installed message'>
+<img src="images/npmyay.png" alt='peerdeps installed message' />
 
 <br />
+
 
 ### IV. To overwrite __eslint__ or __prettier__ settings:
 
@@ -97,37 +100,54 @@ When correctly installed, it shows a SUCCESS message.
 
 <br />
 
-### To have IDE lint files:
+## To have IDE lint files:
+
+
+### WebStorm :book:
 
 <br />
 
-#### Using WebStorm :book:
+Enable Node in Webstorm
 
-It's using `ESlint v8.22.0.`        
-Newest versions have not work for me with WebStorm. ESlint also needs to be enable and
-either set to find this file automatically or manually be linked to it in Webstorm.
-
-#####  Webstorm settings
-
-
-```text
-  // Inside Webstorm
-- Set ESLint to automatic/ manually link file
-```
+<img src="images/setnode.png" alt='node config' />
 
 <br />
+<br />
+ 
 
-##### Some rules are enabled/disabled here.
+Set ESlint
 
-```text
- // In Webstorm   
- > Editor > Inspections
-```
+<img src="images/settingEslint.png" alt='eslint config' />
 
 
+<br /><br />
+
+##### Fixing Errors
+
+
+<img src="images/typeErrors.png" alt='type of errors' />
 
 
 <br />
+<br />
+
+
+Non ESlint errors
+
+
+<img src="images/profileInspectionSet.png" alt='profile inspections'  />
+
+<br /><br />
+
+Adding ESLint error to Rules in Package.json
+
+<img src="images/addingErrorToPackage.png" alt="adding ESlint rule to package json"  />
+
+
+
+
+<br /><br />
+
 
 #### Using VSCode :book:
 
@@ -144,10 +164,9 @@ either set to find this file automatically or manually be linked to it in Websto
 
 <br />
 
-<kbd>OK</kbd>&nbsp; :100: &nbsp; <kbd>SL</kbd>
 
 
-<br />
+
 
 #### REFERENCE FILES I:
 
