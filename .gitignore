@@ -5,3 +5,4 @@ libx/
 .env
 .env.development
 .env.dev
+.vscode
