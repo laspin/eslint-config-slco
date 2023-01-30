@@ -338,7 +338,6 @@ module.exports= {
      testEnvironment: 'jsdom'
   }
     
-/*
- * @jest-environment jsdom //  or per file
-*/
+ // @jest-environment jsdom //  or per file
+
 ```
