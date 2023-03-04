@@ -1,14 +1,9 @@
 module.exports = {
   root: true,
-  extends: ['next', 'airbnb', 'airbnb/hooks', 'prettier'],
-  plugins: ['html', 'react', 'react-hooks', 'prettier'],
+  extends: ['eslint:recommended', 'prettier'],
   parser: '@babel/eslint-parser',
   parserOptions: {
     requireConfigFile: false,
-    allowImportExportEverywhere: true,
-    ecmaFeatures: {
-      jsx: true,
-    },
     babelOptions: {
       presets: ['@babel/preset-env', '@babel/preset-react'],
     },
@@ -20,7 +15,6 @@ module.exports = {
     jest: true,
   },
   rules: {
-    'no-debugger': 0,
     'no-console': 0,
     'no-case-declarations': 0,
     'jsx-a11y/href-no-hash': 0,
@@ -148,4 +142,5 @@ module.exports = {
       },
     ],
   },
+  plugins: ['react', 'jsx-a11y', 'react-hooks', 'prettier'],
 }
