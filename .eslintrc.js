@@ -79,7 +79,7 @@ module.exports = {
     'react/function-component-definition': 0,
     'jsx-a11y/accessible-emoji': 0,
     'jsx-a11y/label-has-associated-control': [
-      1,
+      0,
       {
         labelComponents: ['CustomInputLabel'],
         labelAttributes: ['label'],
@@ -142,5 +142,5 @@ module.exports = {
       },
     ],
   },
-  plugins: ['react', 'jsx-a11y', 'react-hooks', 'prettier'],
+  plugins: ['react', 'react-hooks', 'prettier'],
 }

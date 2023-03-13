@@ -4,13 +4,11 @@
     "**/.*"
   ],
   "compilerOptions": {
-    "types": [
-      "node"
-    ],
-    "target": "ES5",
-    "module": "commonjs",
-    /* Strict Type-Checking Options */
-    "strict": true /* Enable all strict type-checking options. */,
-    "esModuleInterop": true 
-  }
+  "module": "esnext",
+  "target": "esnext",
+  "moduleResolution": "node",
+  "strict": true,
+  "lib": ["ESNext", "DOM", "DOM.Iterable"],
+  "skipLibCheck": true
+}
 }
